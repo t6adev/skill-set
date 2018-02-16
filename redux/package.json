@@ -1,0 +1,24 @@
+{
+  "name": "state-management-library-redux",
+  "version": "1.0.0",
+  "description": "Expressing to use redux",
+  "private": true,
+  "scripts": {
+    "run-simple": "babel-node src/simple.js"
+  },
+  "dependencies": {
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0"
+  },
+  "babel": {
+    "plugins": [
+      "transform-es2015-modules-commonjs",
+      "transform-object-rest-spread"
+    ]
+  },
+  "license": "MIT"
+}
