@@ -5,4 +5,4 @@ This shows libraries that I have/had used and how do I use/understand those.
 - For my understanding.
 - For my practice.
 - For my profile.
-- (For my github contributions graph! :zany_face: )
+- (For my github contributions graph! :stuck_out_tongue_winking_eye: )
