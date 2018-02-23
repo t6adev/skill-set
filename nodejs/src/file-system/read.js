@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 export const readLines = filepath => {
   const contents = fs.readFileSync(filepath, { encoding: 'utf8' });
