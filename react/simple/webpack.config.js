@@ -1,9 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: [
-    './src/client/index.js',
-  ],
+  entry: ['./src/client/index.js'],
   output: {
     path: path.join(__dirname, 'src/client'),
     filename: 'bundle.js',
@@ -16,7 +14,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['env', 'react'],
-        }
+        },
       },
     ],
   },
