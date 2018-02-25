@@ -1,0 +1,10 @@
+{
+  "name": "hmr",
+  "version": "1.0.0",
+  "description": "Expressing to use react with hot module replacement",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT"
+}
