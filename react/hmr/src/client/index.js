@@ -1,9 +1,8 @@
 import { createElement } from 'react';
 import { render } from 'react-dom';
-import App from './App';
 
 const renderApp = () => {
-  render(createElement(App), document.getElementById('app'));
+  render(createElement(require('./App').default), document.getElementById('app'));
 };
 
 renderApp();
