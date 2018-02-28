@@ -2,4 +2,12 @@ import { createElement } from 'react';
 import { render } from 'react-dom';
 import App from './App';
 
-render(createElement(App), document.getElementById('app'));
+const renderApp = () => {
+  render(createElement(App), document.getElementById('app'));
+};
+
+renderApp();
+
+if (module.hot) {
+  module.hot.accept('./App.jsx', renderApp);
+}

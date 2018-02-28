@@ -1,15 +1,21 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: ['./src/client/index.js', 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000'],
+  entry: [
+    './src/client/index.js',
+    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000',
+  ],
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
   },
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'src/client/index.html',
+    }),
     new webpack.HotModuleReplacementPlugin(),
   ],
   module: {
@@ -18,7 +24,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        query: {
+        options: {
           presets: ['env', 'react'],
         },
       },
