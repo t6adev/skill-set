@@ -4,7 +4,10 @@
   "description": "Expressing to use react with hot module replacement",
   "private": true,
   "scripts": {
-    "start": "babel-node src/server/index.js"
+    "start": "NODE_ENV=production node dist/server/index.js",
+    "start-dev": "babel-node src/server/index.js",
+    "precompile": "mkdir -p dist && mkdir -p dist/client && mkdir -p dist/server",
+    "compile": "NODE_ENV=production babel src/server -d dist/server && webpack -p"
   },
   "dependencies": {
     "express": "^4.16.2",
