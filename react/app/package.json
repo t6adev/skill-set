@@ -1,0 +1,33 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Expressing to make application by react",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=production node dist/server/index.js",
+    "start-dev": "babel-node src/server/index.js",
+    "precompile": "mkdir -p dist && mkdir -p dist/client && mkdir -p dist/server",
+    "compile": "NODE_ENV=production babel src/server -d dist/server && webpack -p"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "html-webpack-plugin": "^2.30.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "^3.11.0",
+    "webpack-dev-middleware": "^2.0.6",
+    "webpack-hot-middleware": "^2.21.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "license": "MIT"
+}
