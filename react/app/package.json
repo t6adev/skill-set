@@ -4,6 +4,8 @@
   "description": "Expressing to make application by react",
   "private": true,
   "scripts": {
+    "test": "npm run eslint",
+    "eslint": "eslint src",
     "start": "NODE_ENV=production node dist/server/index.js",
     "start-dev": "babel-node src/server/index.js",
     "precompile": "mkdir -p dist && mkdir -p dist/client && mkdir -p dist/server",
@@ -33,6 +35,16 @@
     "presets": [
       "env"
     ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": "airbnb",
+    "rules": {
+      "global-require": 0
+    }
   },
   "license": "MIT"
 }
