@@ -10,13 +10,17 @@ if (process.env.NODE_ENV === 'production') {
   const webpackDevMiddleware = require('webpack-dev-middleware');
   const webpackConfig = require('../../webpack.config.js');
   const compiler = webpack(webpackConfig);
-  app.use(webpackDevMiddleware(compiler, {
-    noInfo: true,
-    publicPath: webpackConfig.output.publicPath,
-  }));
-  app.use(require('webpack-hot-middleware')(compiler, {
-    path: '/__webpack_hmr',
-  }));
+  app.use(
+    webpackDevMiddleware(compiler, {
+      noInfo: true,
+      publicPath: webpackConfig.output.publicPath,
+    })
+  );
+  app.use(
+    require('webpack-hot-middleware')(compiler, {
+      path: '/__webpack_hmr',
+    })
+  );
   app.get('/', (req, res, next) => {
     const filename = path.join(compiler.outputPath, 'index.html');
     compiler.outputFileSystem.readFile(filename, (err, result) => {
